@@ -1,0 +1,6 @@
+{
+  "env": {
+    "mongoURI": "mongodb+srv://dbLink:dbLinkRoot@angulartutorial-oqx3s.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://dbLink:dbLinkRoot@angulartutorial-oqx3s.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "862546315239e7e6d00e", 
+  "githubSecret": "444eb749736e06f8a970fd78807f2d9d3b86decc"
+}

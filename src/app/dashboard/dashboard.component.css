@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px solid red; */
+}
+
+#container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+ul, li{
+    /* text-decoration: none;
+    text-decoration-style: none; */
+    list-style-type: none;
+}
+
+#recipeCards{
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: flex;
+}
+
+#recipeCards:hover {
+    /* outline: 3px solid black; */
+    box-shadow: 0 0 3pt 2pt red;
+}
+
+
+.recipeImg{
+    width: 25%;
+    height: 100%;
+    display: block;
+    border-radius: 25px;
+    /* vertical-align: top; */
+}
+.recipeImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.recipeStuff{
+    width: 75%;
+    height: 100%;
+    /* display: inline-block; */
+}
+
+    .recipeBar{
+        display: flex;
+        background-color: gold;
+        border-radius: 0px 25px 0px 0px;
+        /* border: 1px solid yellow; */
+    }
+        
+        .recipeTitle{
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 100%;
+        }
+        .recipeTitle a, i{
+            color: red;
+        }
+        
+        fa-icon{
+            display: inline-block;
+            padding-top: 14px;
+            padding-right: 10px;
+        }
+        
+        /* .recipeFavorite .far a:hover{
+            z-index: -2;
+        }
+        .recipeFavorite .fas{
+            position: absolute;
+            z-index: -1;
+        } */
+            /* .recipeFavorite i{
+                padding-right: 4px;
+                padding-top: 4px;
+            } */
+        
+        .recipeInfo{
+            display: flex;
+            height: 75%;
+        }
+        
+            .recipeIngredients{
+                /* width: 50%; */
+                height: 100%;
+                flex-grow: 1;
+                display: inline-block;
+            }
+            
+                .recipeIngredients li{
+                    padding-left: 70px;
+                }
+
+            .recipeDescription{
+                /* width: 50%; */
+                height: 100%;
+                flex-grow: 1;
+                display: inline-block;
+            }
+
+                .recipeDescription p{
+                    padding-left: 70px;
+                }
+    
+
+
+                .favoritecontainer{
+                    position: relative;
+                    padding-right: 4px;
+                    padding-top: 4px;
+                    display: inline;
+                    /* z-index: 1; */
+                  }
+                  .overlay{
+                    position: absolute;
+                    bottom: 0px;
+                    /* padding-right: 4px;
+                    padding-top: 4px; */
+                    opacity: 0;
+                    /* z-index: 0; */
+                    /* display: inline; */
+                    /* background-color: red; */
+                }
+                
+                .favoritecontainer:hover .overlay {
+                    transition: .2s ease;
+                    opacity: 1;
+                    /* z-index: 2; */
+                  }

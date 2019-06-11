@@ -1,0 +1,364 @@
+/* DEFINE VARIABLES */
+:root {
+    /* --yellow: #f89d07; */
+    /* --cols: 1; */
+    /* --span: 1; */
+}
+
+*{
+    font-family: 'Raleway', 'Josefin Sans', sans-serif;
+}
+
+a{
+    cursor: pointer;
+    color: #f89d07;
+    transition-duration: 200ms;
+}
+
+/* GRID ITEMS DEFINED FOR AREA-TEMPLATE */
+nav { grid-area: nav; }
+main { grid-area: main; }
+.section-a { grid-area: section-a; }
+.section-b { grid-area: section-b; }
+.section-c { grid-area: section-c; }
+address { grid-area: address; }
+footer { grid-area: footer; }
+
+#grid{
+    display: grid;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    grid-gap: 0px;
+    /* You Don't to Auto-fit your columns unless its for an image gallery or something similar... Because the columns will vary */
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 20vh 
+                        80vh
+                        1fr
+                        1fr
+                        1fr
+                        1fr
+                        70px;
+    /* grid-template-rows: auto; */
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "main main main main main main main main main main main main"
+    "section-a section-a section-a section-a section-a section-a section-a section-a section-a section-a section-a section-a"
+    "section-b section-b section-b section-b section-b section-b section-b section-b section-b section-b section-b section-b"
+    "section-c section-c section-c section-c section-c section-c section-c section-c section-c section-c section-c section-c"
+    "address address address address address address address address address address address address"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+}
+
+nav{
+    grid-column: 3 / 11;
+}
+
+main{
+    grid-column: 3 / 11;
+}
+
+.section-a{
+    grid-column: 3 / 11;
+    /* height: 100px; */
+}
+.section-b{
+    grid-column: 3 / 11;
+    /* height: 100px; */
+}
+.section-c{
+    grid-column: 3 / 11;
+    /* height: 100px; */
+}
+
+address{
+    grid-column: 3 / 11;
+    /* height: 100px; */
+}
+
+footer{
+    grid-column: 3 / 11;
+    /* height: 100px; */
+}
+
+.navbar {
+    display: flex;
+    /*THIS ALLOWS QUICK SPREADING OUT OF CONTENTS BETWEEN LOGO/TITLE AND LINKS*/
+    justify-content: space-between; 
+    /* padding: 30px; */
+    align-items: center;
+    font-size: 20px;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    /* background-color: transparent; */
+}
+
+.brand{
+}
+
+.title{
+    display: inline-block;
+    letter-spacing: 4px;
+    font-size: 26px;
+    font-weight: 300;
+    color: #f89d07;
+    margin-left: 6px;
+    text-transform: uppercase;
+}
+
+.logo{
+    display: inline;
+    width: 100%;
+    font-size: 22px;
+    color: #f89d07;
+}
+
+
+
+.main-nav {
+    display: flex;
+    list-style-type: none;
+}
+.main-nav li {
+    margin: 0px 10px 0px 10px;
+}
+
+
+.main-nav a {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.navbar-toggle {
+   display: none;
+}
+
+.nav-links, .logo {
+    text-decoration: none;
+    /* color: rgba(255, 255, 255, 0.7) */
+}
+
+.logo:hover {
+    color: #b17027;
+    /* color: blue; */
+}
+
+.nav-links:hover {
+    color: #b17027;
+    /* color: blue; */
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*HIDES THE UL LIST OF LINKS*/
+    .main-nav{
+        display: none;
+    }
+    
+    .main-nav li{
+        text-align: center;
+        margin: 15px;
+    }
+
+    .navbar-toggle{
+        position: absolute;
+        top: 34px;
+        right: 20px;
+        cursor: pointer;
+        color: #f89d07;
+        font-size: 24px;
+        display: inline;
+    }
+    
+    /* REVEALS THE UL LIST OF LINKS */
+    .active{
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+        
+}
+
+
+
+
+/* .firstimpression{
+    display: flex;
+} */
+
+.HeroSection{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.HeroContainer{
+    color: #f89d07;
+    background-color: rgba(0, 0, 0, .4);
+    position: relative;
+    bottom: 150px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.HeroContainer h1{
+    font-size: 60px;
+}
+
+.HeroContainer p{
+    margin: 10px;
+}
+
+.backimage{
+    position: absolute;
+    /* background-image: url('/assets/images/cake_chocolate.jpg'); */
+    /* background-image: url(./images/cake_chocolate.jpg); */
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-size: center;
+    object-fit: cover;
+    outline: 4px cornflowerblue solid;
+    z-index: -1;
+}
+
+.HeroButtons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* centers text along the y axis*/
+}
+
+.HeroButtons a{
+    color: white;
+}
+
+.normbutton{
+    background-color: #edab30;
+    border-radius: 4px;
+    padding: 10px;
+    transition-duration: 200ms;
+    text-decoration: none;
+}
+
+.normbutton:hover{
+    background-color: #cb9329;
+}
+
+.normbutton:active{
+    background-color: #b17027;
+}
+
+.hollowbutton{
+    border: 1px solid #edab30;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px;
+    transition-duration: 200ms;
+}
+
+.hollowbutton:hover{
+    border: 1px solid #bc8010;
+    letter-spacing: 6px;
+}
+
+.hollowbutton:active{
+    background-color: #b17027;
+    transition-duration: 0ms;
+}
+
+
+
+
+
+
+.section-a{
+    margin-bottom: 60px;
+}
+
+.section-a-header{
+    display: block;
+    text-align: center;
+    margin: 60px;
+}
+
+.section-a-title{
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.section-a-subtitle{
+    text-transform: capitalize;
+    font-size: 32px;
+}
+
+.section-a-cards{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(Auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-auto-rows: 150px; */
+    /* grid-template-columns: auto; */
+    /* justify-content: space-evenly; */
+    /* justify-items: center; */
+
+    /* display: flex; */
+    /* width: 100%; */
+    /* justify-content: center; */
+}
+
+.section-a-cards h1{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0080ff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.card fa-layers{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card h1{
+    /* margin-left: 4px; */
+    margin: 8px;
+    letter-spacing: 6px;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+.card p{
+    line-height: 26px;
+}
+
+fa-icon.shopping-cart {
+    position: relative;
+    right: 48px;
+    top: 2px;
+}
+
+.circle {
+    color: rgba(0, 143, 219, 0.8);
+}

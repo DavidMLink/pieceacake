@@ -1,0 +1,53 @@
+<div id="container">
+<a href="/myFavorites">Favorites</a>
+    <a href="clearSession">Logout?</a>
+    <h1>DASHBOARD</h1>
+    <!-- <form *ngIf="dashboardForm" (ngSubmit)="onSubmit()" [formGroup]="dashboardForm">
+        <input type="text">
+        <input type="submit">
+    </form> -->
+    <br>
+    <h2>Recipes:</h2>
+    <!-- FOR LOOP -->
+    <ul *ngFor="let recipe of recipes">
+        <!-- I APOLOGIZE FOR DIV HELL. I THOUGHT IT WOULD BE BETTER THAN USING UL AND LI BUT ITS ACTUALLY WORSE -->
+        <li id="recipeCards">
+            <div class="recipeImg" (click)="displayRecipe(recipe.id)" style="cursor: pointer;">
+                <img src="assets/images/dummy.jpg" alt="Picture of Taco"></div>
+            <div class="recipeStuff">
+                <div class="recipeBar">
+                    <div class="recipeTitle" (click)="displayRecipe(recipe.id)" style="cursor: pointer;"><h2>{{recipe.recipe_name}}</h2></div>
+                    <div class="recipeFavorite">
+                        <!-- {% if recipe.id in favoriteList %} -->
+                        <div class="favoritecontainer">
+                            <a href="/favoriteRecipe/{{recipe.id}}"><fa-icon [icon]="['fas', 'heart']"></fa-icon></a>
+                            <div class="overlay">
+                                <a href="/favoriteRecipe/{{recipe.id}}"><i class="far fa-heart fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <!-- {% else %} -->
+                        <div class="favoritecontainer">
+                            <a href="/favoriteRecipe/{{recipe.id}}"><i class="far fa-heart fa-lg"></i></a>
+                            <div class="overlay">
+                                <a href="/favoriteRecipe/{{recipe.id}}"><fa-icon [icon]="['fas', 'heart']"></fa-icon></a>
+                            </div>
+                        </div>
+                        <!-- {% endif %} -->
+                    </div>
+                </div>
+                <div class="recipeInfo" (click)="displayRecipe(recipe.id)" style="cursor: pointer;">
+                    <div class="recipeDescription">
+                        <h2>Description:</h2>
+                        <p>{{recipe.description}}</p>
+                    </div>
+                    <div class="recipeIngredients">
+                        <h2>Ingredients:</h2>
+                        <p>{{recipe.ingredients}}</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <br>
+      </ul>
+    <!-- END OF FOR LOOP -->
+</div>
